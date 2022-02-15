@@ -9,6 +9,7 @@ Regarding replication and data, please note the following:
 (2)	 Compared to the original file we have used. the main “MCVAR.m” file is restructured to facilitate replication. However, estimation and forecasting computations require significant CPU time. Most of the paper’s results are obtained over Bocconi BIDSA server (12/88 cores used) with parallel computing toolbox. 
 
 1.	Data folder files:
+
 data.xlsx: Quarterly time series data of real GDP growth, inflation, and a short-term interest rate (different from the original series, as explained before). Except GDP growth, the first line of each sheet includes tickers of the data sources.
 
 datapreparation.m: The main file used to construct the dataset. dataQ.mat is the final transformed dataset we use for estimation and forecasting computations.
@@ -17,6 +18,7 @@ Other m files: These files are used for data transformation and cleaning, which 
 
 
 2.	Function folder files
+
 Programs are written in Matlab, and models are estimated with Bayesian methods (Gibbs samplers).
 
 There are three subfolders:
@@ -26,7 +28,8 @@ Prediction: M files used to run predictive simulations and compute CRPS for dens
 
 Util: Auxiliary files used for estimation and forecasting computations.
 
-3.	Main file: 
+3.	Main file
+
 MCVAR.m: The main file to reproduce forecasting results. There are five options available: Minnesota prior, Horseshoe prior, Normal-Gamma prior, Normal-Gamma-Gamma prior and SSSS prior. You can change the relevant lines to reproduce the results in the robustness check sections. Please note that since for SSSS prior we cannot use the triangular algorithm, estimation is not feasible if lag length is larger than 1. We set L=1.
 
 Contact information:  yu.bai [AT] unibocconi.it
